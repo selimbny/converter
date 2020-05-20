@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    
+    <title>converter</title>
+  </head>
+  <body>
+    <div id = "databinding">
+      <h1>Currency Converter</h1>
+      <span>Enter Amount:</span><input type = "number" onkeypress="test1()" v-model.number = "amount" placeholder = "Enter Amount" /><br/><br/>
+      <span>Convert From:</span>
+      <select v-model = "convertfrom" style = "width:300px;font-size:25px;">
+        <option v-for = "(a, index) in currencyfrom"  v-bind:value = "a.name">{{a.desc}}</option>
+      </select>
+ 
+
+      <div id="myDiv"> <h1>{{test1}}</h1> </div>
+
+
+      <div id="add">
+      <form action="/action_page.php">
+        <label for="fname">1 EUR = </label>
+        <input type="text" id="ra" name="ra" value="" placeholder="rate">
+        <input type="text" id="cu" name="cu" value="" placeholder="Currency">
+        <input type="submit" value="Add" onclick="addEur()">
+      </form> 
+
+      <form action="/action_page.php">
+        <label for="fname">1 PLN = </label>
+        <input type="text" id="fname" name="fname" value="" placeholder="Amount">
+        <input type="text" id="lname" name="lname" value="" placeholder="Currency">
+        <input type="submit" value="Add">
+      </form> 
+
+      <form action="/action_page.php">
+        <label for="fname">1 USD = </label>
+        <input type="text" id="fname" name="fname" value="" placeholder="Amount">
+        <input type="text" id="lname" name="lname" value="" placeholder="Currency">
+        <input type="submit" value="Add">
+      </form> 
+
+      <form action="/action_page.php">
+        <label for="fname">1 CAD = </label>
+        <input type="text" id="fname" name="fname" value="" placeholder="Amount">
+        <input type="text" id="lname" name="lname" value="" placeholder="Currency">
+        <input type="submit" value="Add">
+      </form>
+    </div> 
+
+    </div>
+    
+
+   
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   <script type='text/javascript' src='script.js'></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
+
+  </body>
+</html>
